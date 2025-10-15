@@ -1,0 +1,40 @@
+#spring:
+#  kafka:
+#    bootstrap-servers: ${KAFKA_BOOTSTRAP:kafka:9092}
+#    consumer:
+#      group-id: tick-desire-watchers
+#      enable-auto-commit: false
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    listener:
+#      ack-mode: MANUAL_IMMEDIATE   # ← you call ack() in the listener
+#      missing-topics-fatal: false  # tolerate topic not existing yet
+#
+#app:
+#  desireTopic: ${APP_DESIRE_TOPIC:tick.desired.v1}
+#  tickTopic:   ${APP_TICK_TOPIC:tick.v1}
+#  ttlSeconds:  ${APP_TTL_SECONDS:30}
+#  periodMs:    ${APP_PERIOD_MS:200}
+#  workers: 8
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:kafka:9092}
+    consumer:
+      group-id: tick-desire-watchers
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+      missing-topics-fatal: false
+
+app:
+  desireTopic: ${APP_DESIRE_TOPIC:tick.desired.v1}
+  tickTopic:   ${APP_TICK_TOPIC:tick.v1}
+  ttlSeconds:  ${APP_TTL_SECONDS:30}
+  reconcileMs: ${APP_RECONCILE_MS:1000}
+
+logging.level.dev.team.autotrade.tick: DEBUG
+logging.level.dev.team.autotrade.tick.vendor: INFO

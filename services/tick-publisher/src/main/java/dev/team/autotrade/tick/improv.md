@@ -1,0 +1,1 @@
+If you want next, I can add a single “coalescing loop per shard” (K workers that iterate their shard of symbols each tick) to push to tens of thousands of symbols—right now this version is already solid for your 1k target.
