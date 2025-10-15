@@ -1,0 +1,119 @@
+################################################################################
+# Global OS junk
+################################################################################
+# macOS
+.DS_Store
+.AppleDouble
+.apdisk
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+################################################################################
+# IDE / Editor files
+################################################################################
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+.history/
+.code-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+.springBeans
+.sts4-cache/
+
+################################################################################
+# Java / Maven / Gradle
+################################################################################
+# Maven
+target/
+**/target/
+.mvn/wrapper/maven-wrapper.jar # (Optional: keep if you prefer to commit the wrapper JAR)
+
+# Gradle (in case any module uses it)
+.gradle/
+build/
+**/build/
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+################################################################################
+# Logs / Temp / Cache
+################################################################################
+*.log
+**/*.log
+logs/
+**/logs/
+tmp/
+**/tmp/
+*.swp
+*.swo
+
+################################################################################
+# Avro Generated Sources
+################################################################################
+# Keep your .avsc files (they live in src/main/avro), but ignore generated Java
+# produced under target/generated-sources/avro by the avro-maven-plugin.
+**/target/generated-sources/avro/
+
+################################################################################
+# Docker / Compose
+################################################################################
+# Keep compose & service Dockerfiles
+!docker-compose.yml
+!**/Dockerfile
+
+# Ignore local env files (keep a committed example like .env.example)
+.env
+*.env.local
+.envrc
+
+# If you ever bind-mount local Kafka data dirs, ignore them here (example):
+kafka_data/
+**/kafka_data/
+
+################################################################################
+# Node / Frontend (if any UI creeps in later)
+################################################################################
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+
+################################################################################
+# OS / Tooling miscellany
+################################################################################
+*.out
+*.bak
+*.tmp
+*.orig
+*.patch
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+################################################################################
+# Keep commonly useful project files
+################################################################################
+!README.md
+!LICENSE
+!**/src/**
+!**/pom.xml
+!.gitignore
